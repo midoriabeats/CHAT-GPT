@@ -5,7 +5,7 @@ import installer from '@ffmpeg-installer/ffmpeg'
 import { createWriteStream } from 'fs'
 import { dirname, resolve } from 'path'
 import { fileURLToPath } from 'url'
-import { removeFile } from './utills.js'
+import { removeFile } from '../utills.js'
 
 const _dirname = dirname(fileURLToPath(import.meta.url))
 

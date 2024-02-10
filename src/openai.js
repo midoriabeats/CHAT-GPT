@@ -1,9 +1,9 @@
-const TelegramBot = require('node-telegram-bot-api')
-const { ChatGPT } = require('openai')
+import TelegramBot from 'node-telegram-bot-api'
+import OpenAI from 'openai';
 
 const bot = new TelegramBot('TELEGRAM_TOKEN', { polling: true })
 
-const chatGpt = new ChatGPT('OPENAI_KEY')
+const chatGpt = new OpenAI.Chat('OPENAI_KEY')
 
 bot.onText(/\/start/, (msg) => {
     const chatId = msg.chat.id;
@@ -24,4 +24,4 @@ bot.on('message', async (msg) => {
     }
 });
 
-exports.openai = ChatGPT
+export const openai = chatGpt

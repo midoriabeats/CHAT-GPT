@@ -2,7 +2,7 @@ import { Telegraf } from 'telegraf'
 import { message } from 'telegraf/filters'
 import config from 'config'
 import { ogg } from './ogg.js'
-import { openai } from 'openai'
+import { openai } from './openai.js'
 
 const bot = new Telegraf(config.get('TELEGRAM_TOKEN'))
 
